@@ -1,5 +1,7 @@
 # Library Management
-## Functions
+This a Library Management Web App. This app will help admin perform tasks smoothly.
+
+
 ### Admin can perform following tasks
 - Create Admin account and Login.
 - Can Issue Book (added by Admin) to registered student.
