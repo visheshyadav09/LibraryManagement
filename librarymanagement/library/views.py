@@ -92,6 +92,7 @@ def issue_book(request):
     if request.method == "POST":
         form = forms.IssuedBookForm(request.POST)
         if form.is_valid():
+
             # finding the book issued to student and creating entry accordingly
             obj = models.IssuedBook()
             obj.status = "Issued"
@@ -100,6 +101,9 @@ def issue_book(request):
 
             # finding the number of days book is issued for and charging accordingly
             return_date = form.cleaned_data["return_date"]
+            if return_date < datetime.now().date():
+                messages.error(request, "Please select valid date")
+                return redirect("issuebook")
             number_of_days_issued_for = (return_date - datetime.now().date()).days
             obj.expirydate = return_date
             obj.save()

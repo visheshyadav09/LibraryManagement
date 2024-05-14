@@ -101,24 +101,31 @@
     {% include "library/navbaradmin.html" %}
     <br>
     <br>
-<center><h3 style=" margin-bottom: 0px;"class = 'alert alert-success'>ISSUE BOOK TO STUDENT !</h3></center>
-    <div class="signup-form">
+	<center><h3 style=" margin-bottom: 0px;"class = 'alert alert-success'>ISSUE BOOK TO STUDENT !</h3></center>
+	{% if messages %}
+			<ul>
+				{% for message in messages %}
+				<li>{{ message }}</li>
+				{% endfor %}
+			</ul>
+    {% endif %}    
+	<div class="signup-form">
         <form  method="post" class="form-horizontal">
 
     			<center><h2>ISSUE BOOK TO STUDENT</h2></center>
 
-{% csrf_token %}
-{% if form.errors %}
-<div>
-	<ul>
-		{% for field, errors in form.errors.items %}
-			{% for error in errors %}
-				<li>{{ field }}: {{ error }}</li>
+	{% csrf_token %}
+	{% if form.errors %}
+	<div>
+		<ul>
+			{% for field, errors in form.errors.items %}
+				{% for error in errors %}
+					<li>{{ field }}: {{ error }}</li>
+				{% endfor %}
 			{% endfor %}
-		{% endfor %}
-	</ul>
-</div>
-{% endif %}
+		</ul>
+	</div>
+	{% endif %}
 
             {% for field in form %}
             <div class="form-group">
