@@ -1,8 +1,7 @@
 # Library Management
-This is a Library Management Web App. This app will help admin perform tasks smoothly.
+Welcome to our Library Management App! This App is designed to streamline and enhance the administrative tasks of running a library. From organizing books to managing students and tracking book issues, our app helps library administrators to efficiently handle all aspects of library operations.
 
-
-### Admin can perform following tasks
+### Admin can perform following tasks using this Web App
 - Create Admin account and Login.
 - Can Issue Book (added by Admin) to registered student.
 - Can Add, View, Delete and Update Books present in the system.
