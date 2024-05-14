@@ -1,14 +1,15 @@
 # Library Management
-This a Library Management Web App. This app will help admin perform tasks smoothly.
+This is a Library Management Web App. This app will help admin perform tasks smoothly.
 
 
 ### Admin can perform following tasks
 - Create Admin account and Login.
 - Can Issue Book (added by Admin) to registered student.
-- Can Add, View, Book
+- Can Add, View, Delete and Update Books present in the system.
 - Can view Issued book with issued date and expiry date.
 - Can view Fine (15 rupees for each day after expiry date).
 - Can View Students that are registered into system.
+- Can Add, Delete and Update Students.
 - Can Import and add new Books.
 
 ## HOW TO RUN THIS PROJECT
